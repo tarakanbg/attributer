@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Attributer::VERSION
   gem.authors       = ["Svilen Vassilev"]
   gem.email         = ["svilen@rubystudio.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Ruby gem for adding image attributes to HTML blocks}
+  gem.summary       = %q{Ruby gem for adding image attributes to HTML blocks}
+  gem.homepage      = "https://github.com/tarakanbg/attributer"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -22,7 +22,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "guard"
   gem.add_development_dependency "libnotify"
   gem.add_development_dependency "guard-rspec"
-  # gem.add_dependency "curb", "~> 0.8.3"
-  # gem.add_dependency "time_diff", "~> 0.3.0"
-  # gem.add_dependency "gcmapper", "~> 0.3.1"
+  gem.add_dependency "fastimage", "~> 1.2.13"
+  gem.add_dependency "nokogiri", "~> 1.5.6"
 end
