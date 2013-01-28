@@ -19,8 +19,20 @@ describe String do
     end  
 
     it "should produce matching results" do
-      local_test_file.image_attributes(:domain => "http://darvazaogrev.com").should eq(results_file)
-    end    
+      test_string = "<img alt=\"1\" class=\"gallery\" src=\"/assets/thumbnails/1-2057ca29648dc1530b752918f09fba8d.jpg\">"
+      test_string.image_attributes(:domain => "http://darvazaogrev.com").should eq("<img alt=\"1\" class=\"gallery\" src=\"/assets/thumbnails/1-2057ca29648dc1530b752918f09fba8d.jpg\" width=\"200\" height=\"266\">")      
+    end
+
+    it "should raise exception if used without args" do
+      test_string = "<img alt=\"1\" class=\"gallery\" src=\"/assets/thumbnails/1-2057ca29648dc1530b752918f09fba8d.jpg\">"
+      expect {test_string.image_attributes}.to raise_error(ArgumentError)
+    end
+
+    it "should handle local path" do
+      path = File.realpath("spec")
+      test_string = "<img alt=\"test\" src=\"/test.png\">"
+      test_string.image_attributes(:path => path).should eq("<img alt=\"test\" src=\"/test.png\" width=\"500\" height=\"333\">")
+    end      
   end
 
 end
