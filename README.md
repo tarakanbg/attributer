@@ -10,6 +10,11 @@ Useful for example as a callback with WYSIWYG editors that don't automatically a
 `width` and `height` attributes to images or for instantly optimizing all your old blog
 or CMS posts with img tag attributes for speed and standarts compliance.
 
+[![Build Status](https://secure.travis-ci.org/tarakanbg/attributer.png?branch=master)](http://travis-ci.org/tarakanbg/attributer)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/tarakanbg/attributer)
+[![Gemnasium](https://gemnasium.com/tarakanbg/attributer.png?travis)](https://gemnasium.com/tarakanbg/attributer)
+[![Gem Version](https://badge.fury.io/rb/attributer.png)](http://badge.fury.io/rb/attributer)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -52,10 +57,12 @@ attributes properly in place.
 
 ```ruby
 html = '<img alt="test" class="gallery" src="/assets/test.jpg">'
-html.image_attributes(:domain => "http://my-domain.com") # => '<img alt="test" class="gallery" src="/assets/test.jpg" width="200" height="266">'
+html.image_attributes(:domain => "http://my-domain.com") 
+  # => '<img alt="test" class="gallery" src="/assets/test.jpg" width="200" height="266">'
 
 html = '<img alt="test2" class="fuzzy" src="/images/test2.jpg">'
-html.image_attributes(:path => "/home/www/site") # => '<img alt="test2" class="fuzzy" src="/images/test2.jpg" width="340" height="155">'
+html.image_attributes(:path => "/home/www/site") 
+  # => '<img alt="test2" class="fuzzy" src="/images/test2.jpg" width="340" height="155">'
 
 html = Post.find(20).body # =>
     # <div id='gallery'>
