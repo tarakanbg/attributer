@@ -3,7 +3,7 @@
 Ruby gem for adding width and height attributes to image tags within HTML blocks.
 
 This library will parse a piece of HTML, find all the image tags inside it, obtain
-the width and height of these images and insert them as attributes to the img tag.
+the width and height of these images and insert them as attributes to the `img` tag.
 It will then return the entire HTML with the image attributes properly in place.
 
 Useful for example as a callback with WYSIWYG editors that don't automatically add
