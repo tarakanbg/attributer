@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Attributer::VERSION
   gem.authors       = ["Svilen Vassilev"]
   gem.email         = ["svilen@rubystudio.net"]
-  gem.description   = %q{Ruby gem for adding image attributes to HTML blocks}
-  gem.summary       = %q{Ruby gem for adding image attributes to HTML blocks}
+  gem.description   = %q{Ruby gem for adding width and height attributes to image tags within HTML blocks}
+  gem.summary       = %q{Ruby gem for adding width and height attributes to image tags within HTML blocks}
   gem.homepage      = "https://github.com/tarakanbg/attributer"
 
   gem.files         = `git ls-files`.split($/)

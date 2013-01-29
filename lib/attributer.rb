@@ -34,6 +34,7 @@ module Attributer
       @old_htmls = []; @new_htmls = []
       @images = @lpost.css("img")
       @images.each {|i| @old_htmls << i.to_html}
+      process_trailing_slashes
     end
 
     def add_attributes
@@ -51,6 +52,13 @@ module Attributer
       @old_htmls.each do |old|
         @new_post.sub!(old, @new_htmls.shift)                
       end      
+    end
+
+    def process_trailing_slashes
+      @old_htmls.each do |image|
+        image.sub!(">", " />") unless @new_post.include? image
+        image.sub!(" />", "/>") unless @new_post.include? image        
+      end
     end
 
   end
