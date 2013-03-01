@@ -10,10 +10,14 @@ Useful for example as a callback with WYSIWYG editors that don't automatically a
 `width` and `height` attributes to images or for instantly optimizing all your old blog
 or CMS posts with img tag attributes for speed and standarts compliance.
 
-[![Build Status](https://travis-ci.org/tarakanbg/attributer.png?branch=master)](https://travis-ci.org/tarakanbg/attributer)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/tarakanbg/attributer)
+[![Build Status](https://secure.travis-ci.org/tarakanbg/attributer.png?branch=master)](http://travis-ci.org/tarakanbg/attributer)
 [![Gemnasium](https://gemnasium.com/tarakanbg/attributer.png?travis)](https://gemnasium.com/tarakanbg/attributer)
 [![Gem Version](https://badge.fury.io/rb/attributer.png)](http://badge.fury.io/rb/attributer)
+[![Code Climate](https://codeclimate.com/github/tarakanbg/attributer.png)](https://codeclimate.com/github/tarakanbg/attributer)
+
+## Requirements
+
+[Ruby 1.9.3](http://www.ruby-lang.org/en/downloads/) or higher | **Supports Ruby 2.0!**
 
 ## Installation
 
@@ -111,6 +115,12 @@ html.image_attributes(:domain => "http://my-domain.com") # =>
     # <img alt="20" class="gallery" src="/assets/20.jpg" width="200" height="266">  
     # </div>
 ```
+
+## Changelog
+
+### v. 0.1.0 - 1 March 2013
+
+* Ruby 2.0 compatibility
 
 ## Contributing
 
